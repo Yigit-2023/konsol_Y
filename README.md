@@ -10,7 +10,7 @@ Bu programın kaynak kodlarını beta 0.8'den sonra yayınladım. yani diğer be
 sürüm beta 0.8
 
             
-	             /\
+               /\
               /  \
              /    \
             /      \
