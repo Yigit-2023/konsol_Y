@@ -7,6 +7,6 @@ program olamasını umuyorum.
 
 Bu programın kaynak kodlarını beta 0.8'den sonra yayınladım. yani diğer beta sürümleri kapalı kaynaklı bir şekilde arşivlenmiştir.
 
-sürüm: beta 0.8
+sürüm: beta 0.9
 
 
