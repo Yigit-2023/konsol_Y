@@ -17,7 +17,8 @@ def kontrol():
 		exit()
 
 def title(): 
-	print(f"""\n 	Hoş gedldiniz. konsol Y beta {veri.sürüm}
+	print(f"""\n 		
+		Hoş gedldiniz. konsol Y beta {veri.sürüm}
 	     Büyük harf girdisi geçersizdir :D
 	""")
 

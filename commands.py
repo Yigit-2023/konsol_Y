@@ -92,8 +92,27 @@ def komut_lock():
         elif komut_main_input[0:8] == "klsil++ ":
             klasor_sil_pp(komut_main_input,8)
 
-        elif komut_main_input == "python" or "py":
-            python_start()
+
+        elif komut_main_input == "sistem kapat":
+            sistem_kapat()
+
+        elif komut_main_input == "sistem yeniden baslat":
+            sistem_yeniden_baslat()
+
+        elif komut_main_input[0:13] == "git kopyala+ ":
+            gitp(komut_main_input,13)
+
+        elif komut_main_input[0:4] == "kur ":
+            apt_install(komut_main_input,4)
+
+        elif komut_main_input[0:7] == "kaldır ":
+            apt_remove(komut_main_input,7)
+
+        elif komut_main_input == "güncelle":
+            update()
+
+        elif komut_main_input[0:10] == "güncelle: ":
+            paket_update(komut_main_input,10)
 
 
         else:
@@ -188,10 +207,27 @@ def klasor_sil_pp(klasor_isim,bsl):
     os.system(f"cd {klasor_isim[bsl]}")
     os.system(f"rm -rf {klasor_isim[bsl:]}")
 
-def python_start():
-    os.system("python3")
 
+def sistem_kapat():
+    os.system("sudo shutdown now")
 
+def sistem_yeniden_baslat():
+    os.system("sudo reboot")
+
+def gitp(paket_adi,bsl):
+    os.system(f"git clone https://github.com/{paket_adi[bsl:]}")
+
+def apt_install(apt_paket_adı,bsl):
+    os.system(f"sudo apt install {apt_paket_adı[bsl:]}")
+
+def apt_remove(apt_paket_adı,bsl):
+    os.system(f"sudo apt remove {apt_paket_adı[bsl:]}")
+
+def update():
+    os.system("sudo apt update")
+
+def paket_update(paket_adi,bsl):
+    os.system(f"sudo apt upgrade {paket_adi[bsl:]}")
 
 
 

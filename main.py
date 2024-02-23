@@ -202,15 +202,32 @@ while True:
 	elif main_input[0:7] == "km-sil ":
 		komut.dosya_sil(main_input,7)
 
-	elif main_input == "km-python":
-		komut.python_start() 
+	elif main_input == "km-sistem kapat":
+		komut.sistem_kapat()
+
+	elif main_input == "km-sistem yeniden baslat":
+		komut.sistem_yeniden_baslat()
+
+	elif main_input[0:16] == "km-git kopyala+ ":
+		komut.gitp(main_input,16)
+
+	elif main_input[0:7] == "km-kur ":
+		komut.apt_install(main_input,7)
+
+	elif main_input[0:10] == "km-kaldır ":
+		komut.apt_install(main_input,10)
+
+	elif main_input == "km-güncelle":
+		komut.update()
+
+	elif main_input[0:13] == "km-güncelle: ":
+		komut.paket_update(main_input,13)
+
 
 
 
 
 #---------------------------------------------------------------------------------------------[Komut
-
-
 
 
 
