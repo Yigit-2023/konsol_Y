@@ -8,8 +8,7 @@ import commands as komut
 import data
 import degiskenler as veri
 
-
-
+sistem.kontrol()
 sistem.title()
 
 while True:
@@ -25,6 +24,9 @@ while True:
 		#for i_kapanma in range(10000):
 		#	print(f"Kapatılıyor {i_kapanma}")
 		break
+
+	elif main_input == "":
+		pass
 
 #---------------------------------------------------------------------------------------------[Chat
 
@@ -130,6 +132,13 @@ while True:
 	elif main_input == "yiğit kimdir" or main_input == "yiğit çıtak kimdir":
 		komut.yigit()
 
+	elif main_input == "kaynak kodları" or main_input == "kaynak kodlarını ver" or main_input == "kaynak kodlarını verirmisi":
+		print(veri.prgm,veri.Kaynak_kod)
+	elif main_input == "kaynak kodu" or main_input == "kaynak kodunu ver" or main_input == "kaynak kodunu verirmisi":
+		print(veri.prgm,veri.Kaynak_kod)
+	elif main_input == "kaynak kod":
+		print(veri.prgm,veri.Kaynak_kod)
+
 
 
 	
@@ -172,8 +181,30 @@ while True:
 	elif main_input[0:10] == "km-klsil+ ":
 		komut.coklu_klasor_sil(main_input,10)	
 
-	elif main_input[0:7] == "km-git ":
+	elif main_input[0:7] == "km-gir ":
 		komut.ileri(main_input,7)
+
+	elif main_input == "km-neofetch" or main_input == "km-işletim sistemi":
+		komut.neofetch()
+
+	elif main_input == "km-ls":
+		komut.list_y()
+
+	elif main_input == "km-geri":
+		komut.geri()
+
+	elif main_input[0:15] == "km-git kopyala ":
+		komut.git(main_input,15)
+
+	elif main_input[0:11] == "km-klsil++ ":
+		komut.klasor_sil_pp(main_input,11)
+
+	elif main_input[0:7] == "km-sil ":
+		komut.dosya_sil(main_input,7)
+
+	elif main_input == "km-python":
+		komut.python_start() 
+
 
 
 
@@ -198,6 +229,7 @@ while True:
 		sistem.data_cek()
 
 
+
 	
 
 
@@ -205,20 +237,34 @@ while True:
 #---------------------------------------------------------------------------------------------[Sistem
 
 
+
 #---------------------------------------------------------------------------------------------[Süpriz
 
 	elif main_input == "zar" or main_input == "Zar":
-		game.zar()
+		try:
+			game.zar()
+		except:
+			print(f"{veri.prgm}{veri.hata}GUI devre dışı")
 
 
 	elif main_input == "benim için oyun açarmısın" or main_input == "oyun aç" or main_input == "sende oyun var mı" or main_input == "oyun":
-		print(f"{veri.prgm}Bende yılan oyunu var :) ama o oyun kapanırsa bende kapanırım o,_ o")
-		game.oyun1()
+		try:
+			game.oyun1()
+		except:
+			#print(f"{veri.prgm}{veri.hata}GUI devre dışı")
+			pass
 
 	elif main_input == "bir pencere oluştur" or main_input == "pencere oluştur" or main_input == "benim için bir pencere oluştur":
-		game.pencere()
+		try:
+			game.pencere()
+		except:
+			print(f"{veri.prgm}{veri.hata}GUI devre dışı")
+
 	elif main_input == "pencere aç" or main_input == "pencere aç ve şunu yaz":
-		game.pencere()
+		try:
+			game.pencere()
+		except:
+			print(f"{veri.prgm}{veri.hata}GUI devre dışı")
 
 
 #---------------------------------------------------------------------------------------------[Süpriz
@@ -236,3 +282,26 @@ while True:
 
 
 
+
+
+
+
+
+
+
+	       	   #/\
+              #/  \
+             #/    \
+            #/      \
+           #/        \
+          #/          \
+         #/ \         /\
+        #/   \       /  \
+       #/     \     /    \
+      #/       \   /      \
+     #/         \ /        \
+    #/           |          \
+   #/            |           \
+  #/             |            \
+ #/              |             \
+#/______________________________\

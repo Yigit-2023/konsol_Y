@@ -5,7 +5,7 @@ import random
 import data
 import degiskenler as veri
 import os
-
+from sys import exit
 
 
 def yigit():#Buranın ilk fonksiyonu
@@ -22,10 +22,13 @@ def komut_lock():
         except:
             pass
 
-        if komut_main_input == "geri" or komut_main_input == "çık":
+        if komut_main_input == "geri git" or komut_main_input == "çık":
             break
         elif komut_main_input == "kapat" or komut_main_input == "kapan":
-            break
+            exit()
+
+        elif komut_main_input == "":
+            pass
 
 
         elif komut_main_input == "geçmiş":
@@ -68,10 +71,29 @@ def komut_lock():
         elif komut_main_input[0:7] == "klsil+ ":
             coklu_klasor_sil(komut_main_input,7)
 
-        elif komut_main_input[0:4] == "git ":
+        elif komut_main_input[0:4] == "gir ":
             ileri(komut_main_input,4)
 
+        elif komut_main_input == "neofetch" or komut_main_input == "işletim sistemi":
+            neofetch()
 
+        elif komut_main_input == "ls":
+            list_y()
+
+        elif komut_main_input[0:4] == "sil ":
+            dosya_sil(komut_main_input,4)
+
+        elif komut_main_input == "geri":
+            geri()
+
+        elif komut_main_input[0:12] == "git kopyala ":
+            git(komut_main_input,12)
+
+        elif komut_main_input[0:8] == "klsil++ ":
+            klasor_sil_pp(komut_main_input,8)
+
+        elif komut_main_input == "python" or "py":
+            python_start()
 
 
         else:
@@ -138,3 +160,98 @@ def ileri(sonraki_klasor,bsl):
         print(f"{veri.prgm}{sonraki_klasor[bsl:]} Klasörünün içindesin")
     except:
         print(f"{veri.prgm}Böyle bir klasör bulunamadı")
+
+def neofetch():
+    os.system("neofetch")
+
+def list_y():
+    os.system("ls")
+
+def dosya_sil(dosya_isim,bsl):
+    try:
+        os.remove(dosya_isim[bsl:])
+        print(f"{veri.prgm}{dosya_isim[bsl:]} isimli dosya silindi")
+    except:
+        print(f"{veri.prgm}{dosya_isim[bsl:]} isimli dosya bulunamadı")
+
+def geri():
+    current_directory = os.getcwd()
+    parent_directory = os.path.dirname(current_directory)
+    os.chdir(parent_directory)
+    print(f"{veri.prgm}Geri gittiniz :D")
+
+def git(paket_adi,bsl):
+    os.system(f"git clone {paket_adi[bsl:]}")
+    print("\ngit deposu içe aktarıldı :D")
+
+def klasor_sil_pp(klasor_isim,bsl):
+    os.system(f"cd {klasor_isim[bsl]}")
+    os.system(f"rm -rf {klasor_isim[bsl:]}")
+
+def python_start():
+    os.system("python3")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               #/\
+              #/  \
+             #/    \
+            #/      \
+           #/        \
+          #/          \
+         #/ \         /\
+        #/   \       /  \
+       #/     \     /    \
+      #/       \   /      \
+     #/         \ /        \
+    #/           |          \
+   #/            |           \
+  #/             |            \
+ #/              |             \
+#/______________________________\

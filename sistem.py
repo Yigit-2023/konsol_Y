@@ -2,13 +2,23 @@
 
 import data
 import degiskenler as veri
+from os import name
+from sys import exit
 
 
-
+def kontrol():
+	if name == "posix":
+		pass
+	elif name == "nt":
+		print(f"{veri.prgm}Üzgünüm, bu program sadece linux işletim sisteminde çalışabilir. Windows'ta değil :(")
+		exit()
+	else:
+		print(f"{veri.prgm}Üzgünüm, bu program sadece linux işletim sisteminde çalışabilir :(")
+		exit()
 
 def title(): 
-	print(f"""\n Hoş gedldiniz. program Y beta {veri.sürüm} Tüm haklar saklıdır.
-	Bu programda büyük harf yasaktır :D
+	print(f"""\n 	Hoş gedldiniz. konsol Y beta {veri.sürüm}
+	     Büyük harf girdisi geçersizdir :D
 	""")
 
 def clear():
@@ -49,3 +59,22 @@ def data_cek():
 
 
 
+
+
+
+	       	   #/\
+              #/  \
+             #/    \
+            #/      \
+           #/        \
+          #/          \
+         #/ \         /\
+        #/   \       /  \
+       #/     \     /    \
+      #/       \   /      \
+     #/         \ /        \
+    #/           |          \
+   #/            |           \
+  #/             |            \
+ #/              |             \
+#/______________________________\

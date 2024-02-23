@@ -11,11 +11,11 @@ yaz = "Yazılacak: >"
 hata = "Error: >"
 komut = "km>"
 
-sürüm = 0.8
+sürüm = 0.9
 
 
 
-
+Kaynak_kod = "https://github.com/Yigit-2023/konsol_Y"
 
 
 
@@ -30,7 +30,10 @@ konum --> Bulunduğunuz konumu gösterir
 klos+ --> Klasör dizisi oluşturur
 klsil --> Klasör siler
 klsil+ --> Klasör dizisini siler
-git --> Bir sonraki klasöre gider
+gir --> Bir sonraki klasöre gider
+ls --> Linux terminali gibi listeler
+işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
+git kopyala --> Git deponuzu içeri aktarır (Bunun için deponun linkini girmelisiniz)
 
 """
 
@@ -45,6 +48,32 @@ km-konum --> Bulunduğunuz konumu gösterir
 km-klos+ --> Klasör dizisi oluşturur
 km-klsil --> Klasör siler
 km-klsil+ --> Klasör dizisini siler
-km-git --> Bir sonraki klasöre gider
+km-gir --> Bir sonraki klasöre gider
+km-ls --> Linux terminali gibi listeler
+km-işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
+km-git kopyala --> Git deponuzu içeri aktarır (Bunun için deponun linkini girmelisiniz)
 
 """
+
+
+
+
+
+
+
+	       	   #/\
+              #/  \
+             #/    \
+            #/      \
+           #/        \
+          #/          \
+         #/ \         /\
+        #/   \       /  \
+       #/     \     /    \
+      #/       \   /      \
+     #/         \ /        \
+    #/           |          \
+   #/            |           \
+  #/             |            \
+ #/              |             \
+#/______________________________\
