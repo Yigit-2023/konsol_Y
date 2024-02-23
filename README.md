@@ -1,7 +1,7 @@
 # Merhaba!
 
 Bu bir konsol programıdır, linux terminalinde ki temel komutları türkçe olarak
-yazabilirsiniz. Ve bu cpl lisansına sahip, yani istediğiniz gibi değiştirip 
+yazabilirsiniz. Ve bu gpl lisansına sahip, yani istediğiniz gibi değiştirip 
 dağıtabilir siniz! Bu şimdilik kişisel bir proje, ama ilerleyen zamanlarda çok faydalı bir
 program olamasını umuyorum.
 
