@@ -18,8 +18,8 @@ def kontrol():
 
 def title(): 
 	print(f"""\n 		
-		Hoş gedldiniz. konsol Y beta {veri.sürüm}
-	     Büyük harf girdisi geçersizdir :D
+	Hoş gedldiniz. konsol Y beta {veri.sürüm}
+	Büyük harf girdisi geçersizdir :D
 	""")
 
 def clear():
@@ -40,6 +40,9 @@ def data_cek():
 
 	else:
 		print(f"{veri.prgm}Sen yiğit değilsin")
+
+
+
 
 
 

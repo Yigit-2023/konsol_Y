@@ -7,6 +7,7 @@ import game
 import commands as komut
 import data
 import degiskenler as veri
+import GUI as gui
 
 sistem.kontrol()
 sistem.title()
@@ -141,6 +142,8 @@ while True:
 
 
 
+
+
 	
 
 #---------------------------------------------------------------------------------------------[Chat
@@ -215,13 +218,22 @@ while True:
 		komut.apt_install(main_input,7)
 
 	elif main_input[0:10] == "km-kaldır ":
-		komut.apt_install(main_input,10)
+		komut.apt_remove(main_input,10)
 
-	elif main_input == "km-güncelle":
+	elif main_input == "km-sistem güncelle":
 		komut.update()
 
 	elif main_input[0:13] == "km-güncelle: ":
 		komut.paket_update(main_input,13)
+
+	elif main_input[0:15] == "km-linux komut=":
+		komut.linux(main_input,15)
+
+	elif main_input == "km-gui-apt":
+		try:
+			gui.apt()
+		except:
+			print(f"{veri.prgm}{veri.hata}GUI devre dışı")
 
 
 
@@ -264,7 +276,7 @@ while True:
 			print(f"{veri.prgm}{veri.hata}GUI devre dışı")
 
 
-	elif main_input == "benim için oyun açarmısın" or main_input == "oyun aç" or main_input == "sende oyun var mı" or main_input == "oyun":
+	elif main_input == "benim için oyun açarmısın" or main_input == "yılan oyunu" or main_input == "oyun1":
 		try:
 			game.oyun1()
 		except:
@@ -276,7 +288,6 @@ while True:
 			game.pencere()
 		except:
 			print(f"{veri.prgm}{veri.hata}GUI devre dışı")
-
 	elif main_input == "pencere aç" or main_input == "pencere aç ve şunu yaz":
 		try:
 			game.pencere()

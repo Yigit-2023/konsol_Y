@@ -11,7 +11,7 @@ yaz = "Yazılacak: >"
 hata = "Error: >"
 komut = "km>"
 
-sürüm = "0.9.1"
+sürüm = "0.10"
 
 
 
@@ -34,11 +34,13 @@ gir --> Bir sonraki klasöre gider
 ls --> Linux terminali gibi listeler
 işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
 git kopyala --> Git deponuzu içeri aktarır (Bunun için deponun linkini girmelisiniz)
-git+ --> Sadece git kullanıcı adını ve depo adını yazmanız yeterli örnek: "kullanıcı_adı/depo_adı"
+git kopyala+ --> Sadece git kullanıcı adını ve depo adını yazmanız yeterli örnek: "kullanıcı_adı/depo_adı"
 kur --> Paketleri kurar
 kaldır --> Paketlari kaldırır
 güncelle: --> Paketleri günceller
-güncelle --> Sistemi günceller
+sistem güncelle --> Sistemi günceller
+linux komut= -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
+gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
 
 """
 
@@ -57,11 +59,13 @@ km-gir --> Bir sonraki klasöre gider
 km-ls --> Linux terminali gibi listeler
 km-işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
 km-git kopyala --> Git deponuzu içeri aktarır (Bunun için deponun linkini girmelisiniz)
-km-git+ --> Sadece git kullanıcı adını ve depo adını yazmanız yeterli örnek: "kullanıcı_adı/depo_adı"
+km-git kopyala+ --> Sadece git kullanıcı adını ve depo adını yazmanız yeterli örnek: "kullanıcı_adı/depo_adı"
 km-kur --> Paketleri kurar
 km-kaldır --> Paketlari kaldırır
 km-güncelle: --> Paketleri günceller
-km-güncelle --> Sistemi günceller
+km-sistem güncelle --> Sistemi günceller
+km-linux komut= -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
+km-gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
 
 """
 

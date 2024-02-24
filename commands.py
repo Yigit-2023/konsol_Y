@@ -6,6 +6,7 @@ import data
 import degiskenler as veri
 import os
 from sys import exit
+import GUI as gui
 
 
 def yigit():#Buranın ilk fonksiyonu
@@ -96,7 +97,7 @@ def komut_lock():
         elif komut_main_input == "sistem kapat":
             sistem_kapat()
 
-        elif komut_main_input == "sistem yeniden baslat":
+        elif komut_main_input == "sistem yeniden başlat":
             sistem_yeniden_baslat()
 
         elif komut_main_input[0:13] == "git kopyala+ ":
@@ -108,11 +109,23 @@ def komut_lock():
         elif komut_main_input[0:7] == "kaldır ":
             apt_remove(komut_main_input,7)
 
-        elif komut_main_input == "güncelle":
+        elif komut_main_input == "sistem güncelle":
             update()
 
         elif komut_main_input[0:10] == "güncelle: ":
             paket_update(komut_main_input,10)
+
+        elif komut_main_input == "temizle":
+            sistem.clear()
+
+        elif komut_main_input[0:12] == "linux komut=":
+            linux(komut_main_input,12)
+
+        elif komut_main_input == "gui-apt":
+            try:
+                gui.apt()
+            except:
+                print(f"{veri.prgm}{veri.hata}GUI devre dışı")
 
 
         else:
@@ -221,13 +234,18 @@ def apt_install(apt_paket_adı,bsl):
     os.system(f"sudo apt install {apt_paket_adı[bsl:]}")
 
 def apt_remove(apt_paket_adı,bsl):
-    os.system(f"sudo apt remove {apt_paket_adı[bsl:]}")
+    os.system(f"sudo apt purge {apt_paket_adı[bsl:]}")
 
 def update():
     os.system("sudo apt update")
 
 def paket_update(paket_adi,bsl):
     os.system(f"sudo apt upgrade {paket_adi[bsl:]}")
+
+def linux(komut,bsl):
+    os.system(komut[bsl:])
+
+
 
 
 

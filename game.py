@@ -10,7 +10,7 @@ import degiskenler as veri
 
 def oyun1():
         screen = turtle.Screen()
-        screen.title("YILAN OYUNU")
+        screen.title("konsol Y - YILAN OYUNU")
         screen.setup(width=700, height=700)
         screen.tracer(0)
         screen.bgcolor("#1d1d1d")
@@ -122,9 +122,9 @@ def oyun1():
 
                 
                 
-                lvl_file = open("puan.txt","w")
-                lvl_veri = lvl_file.write(str(score))
-                lvl_file.close()
+                #lvl_file = open("puan.txt","w")
+                #lvl_veri = lvl_file.write(str(score))
+                #lvl_file.close()
 
                 new_fruit = turtle.Turtle()
                 new_fruit.speed(0)
