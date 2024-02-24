@@ -11,8 +11,8 @@ Bu programın kaynak kodlarını beta 0.8'den sonra yayınladım. yani diğer be
 Bu program linux işletim sistemi içindir ve Debian tabanlı dağıtımlar için uygundur.
 
 linux terminalinde yapabildiğiniz temel komutları bu konsol programında Türkçe komutlar ve ek komutlar sayesinde rahatlıkla yapabilirsiniz.
-Hatta paket yöneticisi özelliği var.
+Hatta paket yöneticisi özelliği de var.
 
-sürüm: beta 0.9.1
+sürüm: beta 0.10
 
 
