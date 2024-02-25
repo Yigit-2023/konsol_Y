@@ -115,12 +115,6 @@ while True:
 	elif main_input == "nerdesin" or main_input == "sen nerdesin" or main_input == "nerede sin" or main_input == "şu an nerdesin" or main_input == "neredesin":
 		chat.konum()
 
-	elif main_input == "sen yemek yer misin" or main_input == "sen yemek yermisin":
-		print(f"{veri.prgm}Ben yemek yemem :/")
-
-	elif main_input == "sen yaşıyor musun" or main_input == "sen yaşıyormusun" or main_input == "sen canlı mısın" or  main_input == "sen canlımısın":
-		chat.canli_degil()
-
 	elif main_input == "senin duyguların var mı" or main_input == "senin duygun var mı" or main_input == "duyguların var mı" or main_input == "sende duygu var mı":
 		chat.duygu()
 	elif main_input == "duyguların var mı senin" or main_input == "duyguların varmı senin":
