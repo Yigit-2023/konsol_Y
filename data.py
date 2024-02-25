@@ -6,7 +6,6 @@ import degiskenler as veri
 def data_yaz(x):
 	
 
-	
 
 	sifreleniyor1 = x.replace("q","y0032h210")
 
