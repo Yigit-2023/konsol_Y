@@ -6,6 +6,7 @@ from os import system
 
 
 
+
 def apt():
 	def imza():
 		imza_pencere = tk.Tk()

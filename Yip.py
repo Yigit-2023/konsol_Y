@@ -100,6 +100,7 @@ def yip_baslat(paket_adi):
 
 
 
+
 def git_kur():
 	system("sudo apt install git")
 

@@ -3,7 +3,6 @@
 import data
 import degiskenler as veri
 
-
 def nasilsin():
 	while True:
 		print(f"{veri.prgm}İyiyim sen nasılsın :)")

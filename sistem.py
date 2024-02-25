@@ -6,7 +6,6 @@ from os import name
 from sys import exit
 from os import system
 import commands as komut
-#import os
 
 def logo_bas():
 	print(veri.logo)

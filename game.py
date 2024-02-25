@@ -7,7 +7,6 @@ import tkinter as tk
 import data
 import degiskenler as veri
 
-
 def oyun1():
         screen = turtle.Screen()
         screen.title("konsol Y - YILAN OYUNU")

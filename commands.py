@@ -10,6 +10,7 @@ import GUI as gui
 import Yip
 
 
+
 def yigit():#Buranın ilk fonksiyonu
     print("Program: >Beni geliştiren yazılımcı :D")
 

@@ -153,6 +153,7 @@ gir (klasör adı) --> cd komutu ile aynı şeye yara
 
 Diğer:
 
+başlat (paket adı) --> Yüklü olan paketleri çalıştırır
 geçmiş --> Yazma geçmişinizi gösterir
 linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
 komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
