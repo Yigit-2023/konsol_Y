@@ -8,12 +8,22 @@ import commands as komut
 import data
 import degiskenler as veri
 import GUI as gui
+import Yip
 
+sistem.yip()
 sistem.kontrol()
+#sistem.logo_bas()
 sistem.title()
 
+
 while True:
-	
+
+	try:
+		sistem.komut_kilitle()
+	except FileNotFoundError:
+		print(f"{veri.prgm}{veri.hata}Program sistem klasörü dışında çalıştırılamaz :(")
+		break
+
 	main_input = input(veri.sen)
 	try:
 		data.data_yaz(main_input)
@@ -140,6 +150,9 @@ while True:
 	elif main_input == "kaynak kod":
 		print(veri.prgm,veri.Kaynak_kod)
 
+	elif main_input == "logo":
+		print(veri.logo)
+
 
 
 
@@ -235,7 +248,26 @@ while True:
 		except:
 			print(f"{veri.prgm}{veri.hata}GUI devre dışı")
 
+	elif main_input[0:17] == "km-komut kilitle=":
+		komut.baslangic_kilidi(main_input[17:])
 
+	elif main_input == "km-yip-kur":
+		Yip.git_kur()
+
+	elif main_input == "km-yip temizle":
+		Yip.clear()
+
+	elif main_input == "km-yip paketler":
+		Yip.paketler()
+
+	elif main_input[0:14:] == "km-yip kaldır ":
+		Yip.yip_kaldir(main_input[14:])
+
+	elif main_input[0:11] == "km-yip kur ":
+		Yip.yip_kur(komut_main_input[11:])
+
+	elif main_input[0:10] == "km-başlat ":
+		Yip.yip_baslat(main_input[10:])
 
 
 

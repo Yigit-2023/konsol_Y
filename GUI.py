@@ -10,7 +10,7 @@ def apt():
 	def imza():
 		imza_pencere = tk.Tk()
 		imza_pencere.minsize(300,400)
-		imza_pencere.maxsize(200,400)
+		imza_pencere.maxsize(300,400)
 		imza_pencere.title("konsol Y")
 
 		imza = tk.Label(imza_pencere,text="Hazırlyan: YİĞİT ÇITAK\n\nProgramda bir hata\nbulursanız lütfen bana bildirin\n\nyigitcitak.1817gmail.com\n\n\n\n")
@@ -118,3 +118,27 @@ def apt():
 
 
 	apt_gui_pencere.mainloop()
+
+
+
+
+
+
+
+
+	       	   #/\
+              #/  \
+             #/    \
+            #/      \
+           #/        \
+          #/          \
+         #/ \         /\
+        #/   \       /  \
+       #/     \     /    \
+      #/       \   /      \
+     #/         \ /        \
+    #/           |          \
+   #/            |           \
+  #/             |            \
+ #/              |             \
+#/______________________________\

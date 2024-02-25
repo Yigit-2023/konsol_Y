@@ -101,6 +101,7 @@ def oyun1():
                 snake.setx(x + 20)
 
 
+
         screen.listen()
         screen.onkeypress(snake_go_up, "Up")
         screen.onkeypress(snake_go_down, "Down")

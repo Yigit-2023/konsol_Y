@@ -11,14 +11,31 @@ yaz = "Yazılacak: >"
 hata = "Error: >"
 komut = "km>"
 
-sürüm = "0.10"
+sürüm = "1.0"
 
 
 
 Kaynak_kod = "https://github.com/Yigit-2023/konsol_Y"
 
 
-
+logo = """
+               /\\
+              /  \\
+             /    \\
+            /      \\
+           /        \\
+          /          \\
+         / \\         /\\
+        /   \\       /  \\
+       /     \\     /    \\
+      /       \\   /      \\
+     /         \\ /        \\
+    /           |          \\
+   /            |           \\
+  /             |            \\
+ /              |             \\
+/______________________________\\
+"""
 
 
 komutlar_lock = """
@@ -41,6 +58,12 @@ güncelle: --> Paketleri günceller
 sistem güncelle --> Sistemi günceller
 linux komut= -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
 gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
+yip-kur -- > Yip paket yöneticisi çalışmıyorsa bunu yazın. Bu komut Yip için gerekli paketleri indirir
+yip temizle -- > Bu komut bütün Yip paketlerini temizler
+komut kilitle= --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
+yip kur (paket adı) --> paketleri kurar
+yip kaldır (paket adı) --> paketileri kaldırır 
+yip paketler --> yüklü olan paketleri gösterir
 
 """
 
@@ -66,8 +89,132 @@ km-güncelle: --> Paketleri günceller
 km-sistem güncelle --> Sistemi günceller
 km-linux komut= -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
 km-gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
+km-yip-kur -- > Yip paket yöneticisi çalışmıyorsa bunu yazın. Bu komut Yip için gerekli paketleri indirir
+km-yip temizle -- > Bu komut bütün Yip paketlerini temizler
+km-komut kilitle= --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
+km-yip kur (paket adı) --> paketleri kurar
+km-yip kaldır (paket adı) --> paketileri kaldırır 
+km-yip paketler --> yüklü olan paketleri gösterir
 
 """
+
+
+
+
+
+
+
+yardim_pp = """ 
+------------------------------------------------------------------------------------------------------
+Git Komutları:
+
+git kopyala (depo linki) --> Git deponuzu içeri aktarır (Bunun için deponun linkini girmelisiniz)
+git kopyala+ (kullanıcı_dı/depo_adı) --> Sadece git kullanıcı adını ve depo adını yazmanız yeterli
+
+------------------------------------------------------------------------------------------------------
+Apt paket yöneticisi:
+
+kur (paket adı) --> apt Paketlerini kurar
+kaldır (paket adı) --> apt Paketlarini kaldırır
+güncelle: (paket adı) --> apt Paketlerini günceller
+gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
+sistem güncelle --> Sistemi günceller
+
+------------------------------------------------------------------------------------------------------
+Klasör işlemleri:
+
+klos (oluşturkam istediğiniz klasör adı) --> Bir klasör oluşturur
+klos+ (oluşturkam istediğiniz dizi adı. örnek: Yigit/citak/17) --> üst üste klasör oluşturur
+klsil (klasör adı) --> boş bir klasörü siler
+klsil+ (klsör adı) --> klos+ ile oluştururmuş bir diziyi siler
+klsil++ (dosya adı) --> içerisi dolu olan klasörleri siler (silemeyeceği hiç bir klasör yok)
+
+------------------------------------------------------------------------------------------------------
+Yip paket yöneticisi:
+
+yip kur (paket adı) --> paketleri kurar
+yip-kur -- > Yip paket yöneticisi çalışmıyorsa bunu yazın. Bu komut Yip için gerekli paketleri indirir
+yip temizle (paket adı) -- > Bu komut bütün Yip paketlerini temizler
+yip kaldır (paket adı) --> Paketileri kaldırır 
+yip paketler --> Yüklü olan yip paketlerini gösterir
+yip depo --> yip deposunda bulunan tüm paketleri gösterir
+
+------------------------------------------------------------------------------------------------------
+
+Dosya işlemleri:
+
+sil (dosya adı) --> dosya siler
+konum --> Bulunduğunuz konumu gösterir
+ls --> Bulunduğunuz konumdaki klasörleri ve dosyaları görüntüler
+ışınlan (konum girin. örnek: /home/kullanıcı_adınız/Msaüstü) --> Konum değiştirir
+gir (klasör adı) --> cd komutu ile aynı şeye yara
+
+------------------------------------------------------------------------------------------------------
+
+Diğer:
+
+geçmiş --> Yazma geçmişinizi gösterir
+linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
+komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
+işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
+
+--------------------------------------------------------------------------------------
+"""
+
+
+
+
+yip_paketleri = """ Yip deposundaki paketler:
+
+|-Minecraft:
+|----Tür: Oyun
+|----Hazırlayanlar: tl legacy
+|----Kurmak için gerekli komut: yip kur minecraft
+
+|-Simple Text Editor:
+|----Tür: Metin düzenleyeci
+|----Hazırlayanlar: chat gpt
+|----Kurmak için gerekli komut: yip kur simple_text-editor
+
+
+
+bulunan program sayısı: 2
+
+Sizlerde kendi yaptığınız programları buraya ekleyebilirsiniz :D
+Yapmanız gereken bana e-posta göndermeniz ve programınzın bulunduğu
+git deposunun linkini atmanız yeterli
+
+yigitcitak.1817@gmail.com
+
+"""
+
+
+
+
+
+
+hata_masaji_1 = """Programın sistem dosyasında değilsin. Bu yüzden bu komutu kullanabilmen için sistem klasörüne geri dönün
+programın sistem klasörüne geri dönek için ışınlan komutunu kullanabilirsin"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

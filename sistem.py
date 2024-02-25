@@ -4,7 +4,17 @@ import data
 import degiskenler as veri
 from os import name
 from sys import exit
+from os import system
+import commands as komut
+#import os
 
+def logo_bas():
+	print(veri.logo)
+
+
+def yip():
+	system("sudo mkdir /opt/Yip")
+	print("----------------")
 
 def kontrol():
 	if name == "posix":
@@ -18,9 +28,21 @@ def kontrol():
 
 def title(): 
 	print(f"""\n 		
-	Hoş gedldiniz. konsol Y beta {veri.sürüm}
+	Hoş gedldiniz. konsol Y sÜrüm {veri.sürüm}
 	Büyük harf girdisi geçersizdir :D
 	""")
+
+def komut_kilitle():
+    dosya_acildi = open("DATA/komutKilid.yc", "r")
+    dosya_aktif = dosya_acildi.read()
+    if dosya_aktif == "aktif":
+        komut.komut_lock()
+    else:
+        pass
+        #print(dosya_aktif)
+    dosya_acildi.close()
+
+
 
 def clear():
 	for siliniyor in range(10000):

@@ -7,7 +7,7 @@ import degiskenler as veri
 def nasilsin():
 	while True:
 		print(f"{veri.prgm}İyiyim sen nasılsın :)")
-		chat_main_input = input(ver.sen)
+		chat_main_input = input(veri.sen)
 		data.data_yaz(chat_main_input)
 
 
@@ -23,13 +23,14 @@ def nasilsin():
 			break
 
 		else:
-			print(f"{veri.prgm}Dediğinizi anlamadım, daha anlaşılır bir şekilde yazarmısınız O_O ?")
+			print(f"{veri.prgm}?")
+			break
 
 
 
 def adin_ne():
 	#while True:
-	print(f"{veri.prgm}Benim adım... Bende bilmiyorum :/ Ama yiğite sor istersen, beni o yaptı U u U")
+	print(f"{veri.prgm}Benim adım konsol Y :D")
 
 
 

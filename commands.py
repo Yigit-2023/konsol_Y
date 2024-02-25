@@ -7,6 +7,7 @@ import degiskenler as veri
 import os
 from sys import exit
 import GUI as gui
+import Yip
 
 
 def yigit():#Buranın ilk fonksiyonu
@@ -43,7 +44,7 @@ def komut_lock():
                 print(f"{veri.prgm}{veri.hata}Başka bir konumda bulunduğunuz için geçmişi kaydeten dosyayı açamıyoruz :(")
 
         elif komut_main_input == "yardım":
-            print(f"{veri.prgm}Komutlar:\n{veri.komutlar_lock}")
+            print(f"{veri.prgm}Komutlar:\n{veri.yardim_pp}")
 
         elif komut_main_input == "sil" or komut_main_input == "clear":
             sistem.clear()
@@ -127,6 +128,31 @@ def komut_lock():
             except:
                 print(f"{veri.prgm}{veri.hata}GUI devre dışı")
 
+        elif komut_main_input == "yip temizle":
+            Yip.clear()
+
+        elif komut_main_input == "yip-kur":
+            Yip.git_kur()
+
+        elif komut_main_input[0:14] == "komut kilitle=":
+            baslangic_kilidi(komut_main_input[14:])
+
+        elif komut_main_input == "yip paketler":
+            Yip.paketler()
+
+        elif komut_main_input[0:11] == "yip kaldır ":
+            Yip.yip_kaldir(komut_main_input[11:])
+
+        elif komut_main_input[0:8] == "yip kur ":
+            Yip.yip_kur(komut_main_input[8:])
+
+        elif komut_main_input[0:7] == "başlat ":
+            Yip.yip_baslat(komut_main_input[7:])
+
+        elif komut_main_input == "yip depo":
+            print(veri.prgm,veri.yip_paketleri)
+
+
 
         else:
             print(f"{veri.prgm}Geçersiz komut")
@@ -163,12 +189,18 @@ def listele():
     print(veri.prgm," ",os.listdir())
 
 def klasor_olustur(klasor_isim,bsl):
-    os.mkdir(klasor_isim[bsl:])
-    print(f"{veri.prgm}{klasor_isim[bsl:]} isimli klasör oluştururdu :D")
+    try:
+        os.mkdir(klasor_isim[bsl:])
+        print(f"{veri.prgm}{klasor_isim[bsl:]} isimli klasör oluştururdu :D")
+    except:
+        print(f"{veri.prgm}{klasor_isim[bsl:]} İsimli bir klasör var zaten")
 
 def coklu_klasor_olustur(klasor_isim,bsl):
-    os.makedirs(klasor_isim[bsl:])
-    print(f"{veri.prgm}{klasor_isim[bsl:]} dizisi oluştururdu :D")
+    try:
+        os.makedirs(klasor_isim[bsl:])
+        print(f"{veri.prgm}{klasor_isim[bsl:]} dizisi oluştururdu :D")
+    except:
+        print(f"{veri.prgm}{klasor_isim[bsl:]} İsimli bir klasör var zaten")
 
 def klasor_sil(klasor_isim,bsl):
     try:
@@ -217,8 +249,7 @@ def git(paket_adi,bsl):
     print("\ngit deposu içe aktarıldı :D")
 
 def klasor_sil_pp(klasor_isim,bsl):
-    os.system(f"cd {klasor_isim[bsl]}")
-    os.system(f"rm -rf {klasor_isim[bsl:]}")
+    os.system(f"sudo rm -r {klasor_isim[bsl:]}")
 
 
 def sistem_kapat():
@@ -244,6 +275,26 @@ def paket_update(paket_adi,bsl):
 
 def linux(komut,bsl):
     os.system(komut[bsl:])
+
+def baslangic_kilidi(a):
+    try:
+        if a == "kapalı":
+            dosya_acildi = open("DATA/komutKilid.yc", "w")
+            dosya_acildi.write("devre dışı")
+            dosya_acildi.close()
+            print(f"{veri.prgm}Başlangıç komutu devre dışı")
+
+        elif a == "açık":
+            dosya_acildi = open("DATA/komutKilid.yc", "w")
+            dosya_acildi.write("aktif")
+            dosya_acildi.close()
+            print(f"{veri.prgm}Başlangıç komutu aktif")
+
+        else:
+            print(f"{veri.prgm}Geçersiz komut")
+
+    except:
+        print(f"{veri.prgm}{veri.hata}{veri.hata_masaji_1}")
 
 
 
