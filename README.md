@@ -19,9 +19,11 @@ yigitcitak.1817@gmail.com
 
 Nasıl kurulur ve çalıştırılır?
 terminali açın ve şu komutları yazın
+
 kurmak için:
 1-sudo apt install git
 2-git clone https://github.com/Yigit-2023/konsol_Y
+
 Çalıştırmak için:
 1-cd konsol_Y
 2-python3 main.py
