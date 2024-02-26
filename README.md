@@ -33,4 +33,8 @@ Terminali açın ve aşağdaki komurları girin:
 
 
 
+
+
+
+
 sürüm: 1.0
