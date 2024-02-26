@@ -126,15 +126,15 @@ Klasör işlemleri:
 klos (oluşturkam istediğiniz klasör adı) --> Bir klasör oluşturur
 klos+ (oluşturkam istediğiniz dizi adı. örnek: Yigit/citak/17) --> üst üste klasör oluşturur
 klsil (klasör adı) --> boş bir klasörü siler
-klsil+ (klsör adı) --> klos+ ile oluştururmuş bir diziyi siler
-klsil++ (dosya adı) --> içerisi dolu olan klasörleri siler (silemeyeceği hiç bir klasör yok)
+klsil+ (klsör dizisi adı) --> klos+ ile oluştururmuş bir diziyi siler
+klsil++ (klasör adı) --> içerisi dolu olan klasörleri siler (silemeyeceği hiç bir klasör yok)
 
 ------------------------------------------------------------------------------------------------------
 Yip paket yöneticisi:
 
 yip kur (paket adı) --> paketleri kurar
 yip-kur -- > Yip paket yöneticisi çalışmıyorsa bunu yazın. Bu komut Yip için gerekli paketleri indirir
-yip temizle (paket adı) -- > Bu komut bütün Yip paketlerini temizler
+yip temizle -- > Bu komut bütün Yip paketlerini temizler
 yip kaldır (paket adı) --> Paketileri kaldırır 
 yip paketler --> Yüklü olan yip paketlerini gösterir
 yip depo --> yip deposunda bulunan tüm paketleri gösterir
