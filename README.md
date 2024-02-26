@@ -30,7 +30,7 @@ Terminali açın ve aşağdaki komurları girin:
 4-python3 main.py
 
 
-
+Not:Programıdaki komut lsitesine ulaşabilmek için "yardım" komutunu kullanın
 
 
 
