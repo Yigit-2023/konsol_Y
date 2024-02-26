@@ -18,8 +18,8 @@ Sizlerde bu paket yöneticisine kendi yaptığınız programları ekleyebilirsin
 yigitcitak.1817@gmail.com
 
 
-Nasıl kurulur ve çalıştırılır.
-Terminali açın ve aşağdaki komurları girin:
+Nasıl kurulur ve çalıştırılır?
+Terminali açın ve aşağdaki komutları girin:
 
 1-sudo apt install git
 
