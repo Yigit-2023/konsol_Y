@@ -45,7 +45,7 @@ def komut_lock():
                 print(f"{veri.prgm}{veri.hata}Başka bir konumda bulunduğunuz için geçmişi kaydeten dosyayı açamıyoruz :(")
 
         elif komut_main_input == "yardım":
-            print(f"{veri.prgm}Komutlar:\n{veri.yardim_pp}")
+            print(f"{veri.prgm}Komutlar:\n{veri.help_2}")
 
         elif komut_main_input == "sil" or komut_main_input == "clear":
             sistem.clear()

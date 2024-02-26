@@ -104,7 +104,67 @@ km-yip paketler --> yüklü olan paketleri gösterir
 
 
 
-yardim_pp = """ 
+help_1 = """ 
+------------------------------------------------------------------------------------------------------
+Git Komutları:
+
+km-git kopyala (depo linki) --> Git deponuzu içeri aktarır (Bunun için deponun linkini girmelisiniz)
+km-git kopyala+ (kullanıcı_dı/depo_adı) --> Sadece git kullanıcı adını ve depo adını yazmanız yeterli
+
+------------------------------------------------------------------------------------------------------
+Apt paket yöneticisi:
+
+km-kur (paket adı) --> apt Paketlerini kurar
+km-kaldır (paket adı) --> apt Paketlarini kaldırır
+km-güncelle: (paket adı) --> apt Paketlerini günceller
+km-gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
+km-sistem güncelle --> Sistemi günceller
+
+------------------------------------------------------------------------------------------------------
+Klasör işlemleri:
+
+km-klos (oluşturkam istediğiniz klasör adı) --> Bir klasör oluşturur
+km-klos+ (oluşturkam istediğiniz dizi adı. örnek: Yigit/citak/17) --> üst üste klasör oluşturur
+km-klsil (klasör adı) --> boş bir klasörü siler
+km-klsil+ (dizi klsör adı) --> klos+ ile oluştururmuş bir diziyi siler
+km-klsil++ (klasör adı) --> içerisi dolu olan klasörleri siler (silemeyeceği hiç bir klasör yok)
+
+------------------------------------------------------------------------------------------------------
+Yip paket yöneticisi:
+
+km-yip kur (paket adı) --> paketleri kurar
+km-yip-kur -- > Yip paket yöneticisi çalışmıyorsa bunu yazın. Bu komut Yip için gerekli paketleri indirir
+km-yip temizle -- > Bu komut bütün Yip paketlerini temizler
+km-yip kaldır (paket adı) --> Paketileri kaldırır 
+km-yip paketler --> Yüklü olan yip paketlerini gösterir
+km-yip depo --> yip deposunda bulunan tüm paketleri gösterir
+
+------------------------------------------------------------------------------------------------------
+
+Dosya işlemleri:
+
+km-sil (dosya adı) --> dosya siler
+km-konum --> Bulunduğunuz konumu gösterir
+km-ls --> Bulunduğunuz konumdaki klasörleri ve dosyaları görüntüler
+km-ışınlan (konum girin. örnek: /home/kullanıcı_adınız/Msaüstü) --> Konum değiştirir
+km-gir (klasör adı) --> cd komutu ile aynı şeye yarar
+
+------------------------------------------------------------------------------------------------------
+
+Diğer:
+
+km-temizle --> Konsoldaki yazıları siler
+km-başlat (paket adı) --> Yüklü olan paketleri çalıştırır
+km-geçmiş --> Yazma geçmişinizi gösterir
+km-linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
+km-komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
+km-işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
+
+--------------------------------------------------------------------------------------
+"""
+
+
+help_2 = """ 
 ------------------------------------------------------------------------------------------------------
 Git Komutları:
 
@@ -126,7 +186,7 @@ Klasör işlemleri:
 klos (oluşturkam istediğiniz klasör adı) --> Bir klasör oluşturur
 klos+ (oluşturkam istediğiniz dizi adı. örnek: Yigit/citak/17) --> üst üste klasör oluşturur
 klsil (klasör adı) --> boş bir klasörü siler
-klsil+ (klsör dizisi adı) --> klos+ ile oluştururmuş bir diziyi siler
+klsil+ (dizi klsör adı) --> klos+ ile oluştururmuş bir diziyi siler
 klsil++ (klasör adı) --> içerisi dolu olan klasörleri siler (silemeyeceği hiç bir klasör yok)
 
 ------------------------------------------------------------------------------------------------------
@@ -147,12 +207,13 @@ sil (dosya adı) --> dosya siler
 konum --> Bulunduğunuz konumu gösterir
 ls --> Bulunduğunuz konumdaki klasörleri ve dosyaları görüntüler
 ışınlan (konum girin. örnek: /home/kullanıcı_adınız/Msaüstü) --> Konum değiştirir
-gir (klasör adı) --> cd komutu ile aynı şeye yara
+gir (klasör adı) --> cd komutu ile aynı şeye yarar
 
 ------------------------------------------------------------------------------------------------------
 
 Diğer:
 
+temizle --> Konsoldaki yazıları siler
 başlat (paket adı) --> Yüklü olan paketleri çalıştırır
 geçmiş --> Yazma geçmişinizi gösterir
 linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)

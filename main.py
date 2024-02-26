@@ -168,7 +168,7 @@ while True:
 			print(f"{veri.prgm}{veri.hata}Başka bir konumda bulunduğunuz için geçmişi kaydeten dosyayı açamıyoruz :(")
 
 	elif main_input == "km-yardım" or main_input == "km-help":
-		komut.yardim()
+		print(veri.help_1)
 
 	elif main_input == "km-konum" or main_input == "km-kon":
 		komut.konum()
