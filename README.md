@@ -17,6 +17,9 @@ Bu programın içinde kendi yaptığım Yip isimli bir paket yöneticisi var. il
 Sizlerde bu paket yöneticisine kendi yaptığınız programları ekleyebilirsiniz, Yapmanız gereken sadece bana e-psta göndermeniz
 yigitcitak.1817@gmail.com
 
+
+indirmek için: git clone https://github.com/Yigit-2023/konsol_Y
+
 sürüm: 1.0
 
 
