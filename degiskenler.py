@@ -2,7 +2,6 @@
 
 
 
-
 prgm = "Program: >"
 sen = "Sen: >"
 ben = "Yiğit: >"
@@ -10,8 +9,9 @@ sif = "Şifre: >"
 yaz = "Yazılacak: >"
 hata = "Error: >"
 komut = "km>"
+chb = "chat>"
 
-sürüm = "1.0"
+sürüm = "1.1"
 
 
 
@@ -105,6 +105,7 @@ km-yip paketler --> yüklü olan paketleri gösterir
 
 
 help_1 = """ 
+KOMUTLAR
 ------------------------------------------------------------------------------------------------------
 Git Komutları:
 
@@ -116,7 +117,7 @@ Apt paket yöneticisi:
 
 km-kur (paket adı) --> apt Paketlerini kurar
 km-kaldır (paket adı) --> apt Paketlarini kaldırır
-km-güncelle: (paket adı) --> apt Paketlerini günceller
+km-güncelle (paket adı) --> apt Paketlerini günceller
 km-gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
 km-sistem güncelle --> Sistemi günceller
 
@@ -148,6 +149,7 @@ km-konum --> Bulunduğunuz konumu gösterir
 km-ls --> Bulunduğunuz konumdaki klasörleri ve dosyaları görüntüler
 km-ışınlan (konum girin. örnek: /home/kullanıcı_adınız/Msaüstü) --> Konum değiştirir
 km-gir (klasör adı) --> cd komutu ile aynı şeye yarar
+km-geri --> Bir klasör geri gider
 
 ------------------------------------------------------------------------------------------------------
 
@@ -160,7 +162,29 @@ km-linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya y
 km-komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
 km-işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
 
---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+
+
+ÖZELLİKLER:
+
+------------------------------------------------------------------------------------------------------
+
+Modlar:
+
+komut --> km moduna kilitler ve komutların başına km- yazmak zorunda kalmazsın | geri dönmek için "çık" yazın
+chat bot --> Sizin eğitebileceğiniz bir chat bot açar | geri dönmek için "çık" yazın
+
+------------------------------------------------------------------------------------------------------
+
+Diğer:
+
+kapat --> Bu komut hem km modunda hemde chat bot modunda, yani her modda çalışır ve bu programı kapatmaya yarar
+sil --> Konsoldaki yazıları siler
+komut kilitle=aktif --> Bunu yazarsanız programı her çalıştığında km modunda ile başlar ve km modunu sürekli aktif etmek zorunda kalmazsınız
+
+
 """
 
 
@@ -176,7 +200,7 @@ Apt paket yöneticisi:
 
 kur (paket adı) --> apt Paketlerini kurar
 kaldır (paket adı) --> apt Paketlarini kaldırır
-güncelle: (paket adı) --> apt Paketlerini günceller
+güncelle (paket adı) --> apt Paketlerini günceller
 gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
 sistem güncelle --> Sistemi günceller
 
@@ -208,6 +232,7 @@ konum --> Bulunduğunuz konumu gösterir
 ls --> Bulunduğunuz konumdaki klasörleri ve dosyaları görüntüler
 ışınlan (konum girin. örnek: /home/kullanıcı_adınız/Msaüstü) --> Konum değiştirir
 gir (klasör adı) --> cd komutu ile aynı şeye yarar
+geri --> Bir klasör geri gider
 
 ------------------------------------------------------------------------------------------------------
 

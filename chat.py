@@ -1,104 +1,65 @@
-#Yazan Yiğit çıtak
+#Yazan Dinçer Tekin
+#Düzenleyen Yiğit çıtak
 
+from difflib import get_close_matches as yakin_sonuclari_getir
+from sys import exit
+import chat
 import data
+import json
 import degiskenler as veri
 
-def nasilsin():
+def veritabanini_yukle():
+	with open('DATA/veritabani.json', 'r') as dosya:
+		return json.load(dosya)
+
+def veritabanina_yaz(veriler):
+	with open('DATA/veritabani.json', 'w') as dosya:
+		json.dump(veriler, dosya, indent=2)
+
+def yakin_sonuc_bul(soru, sorular):
+	eslesen = yakin_sonuclari_getir(soru, sorular, n=1, cutoff=0.6)
+	return eslesen[0] if eslesen else None
+
+def cevabini_bul(soru, veritabani):
+	for soru_cevaplar in veritabani["sorular"]:
+		if soru_cevaplar["soru"] == soru:
+			return soru_cevaplar["cevap"]
+	return None
+
+def chat_bot():
 	while True:
-		print(f"{veri.prgm}İyiyim sen nasılsın :)")
-		chat_main_input = input(veri.sen)
-		data.data_yaz(chat_main_input)
+		veritabani = veritabanini_yukle()
 
+		soru = input(f"{veri.sen}{veri.chb}")
+		try:
+			data.data_yaz(soru)
+		except:
+			pass
 
-		if chat_main_input == "soruyu geç":
+		if soru == "çık":
 			break
 
-		elif chat_main_input == "iyi" or chat_main_input == "iyiyim" or chat_main_input == "iyiyim teşekürler" or chat_main_input == "çok iyiyim" or chat_main_input == "bende iyiyim" or chat_main_input == "bende iyi":
-			print(f"{veri.prgm}İyi olmanıza sevindim efendin :D")
-			break
+		elif soru == "kapan" or soru == "kapat:":
+			exit()
+        
+		gelen_sonuc = yakin_sonuc_bul(soru, [soru_cevaplar["soru"] for soru_cevaplar in veritabani["sorular"]])
+		if gelen_sonuc:
+			verilecek_cevap = cevabini_bul(gelen_sonuc, veritabani)
+			print(f"{veri.prgm}{verilecek_cevap}")
 
-		elif chat_main_input == "kötü" or chat_main_input == "kötüyüm" or chat_main_input == "hiç iyi değilim" or chat_main_input == "iyi değilim" or chat_main_input == "iyi değil":
-			print(f"{veri.prgm}  :(")
-			break
+
 
 		else:
-			print(f"{veri.prgm}?")
-			break
+			print(f"{veri.prgm}Bunu nasıl cevaplayacağımı bilmiyorum. Öğretir misiniz?")
+			yeni_cevap = input(f"Öğretmek için yazabilir veya 'geç' diyebilirsiniz.\n{veri.sen}")
 
-
-
-def adin_ne():
-	#while True:
-	print(f"{veri.prgm}Benim adım konsol Y :D")
-
-
-
-
-def kim_yapti():
-	#while True:
-	print(f"{veri.prgm}Beni Yiğit çıtak geliştirdi :)")
-
-
-
-def selam():
-	print(f"{veri.prgm}Selam, size nasıl yardımcı olabilirim? :)")
-	
-
-
-def nesin():
-	print(f"{veri.prgm}Ben python ile çalışan bir programım :)")
-
-
-def tanimla(x1):
-	print(f"{veri.prgm}Mamnun oldum ",x1[11:]," :D")
-
-def ozellikler():
-	print(f"{veri.prgm}Özelliklerimi keşfetmek istiyorsan 'km-yardım' yazın :)")
-
-
-def sevmek():
-	print(f"{veri.prgm}Bende seni seviyorum <3 :D")
-
-
-def tesekur():
-	print(f"{veri.prgm}Rica ederim :D")
-
-def sinir():
-	print(f"{veri.prgm}   :(")
-
-def affet():
-	print(f"{veri.prgm}sorun değil :)")
-
-def bilmek():
-	print(f"{veri.prgm}Bildiğim tek şey, hiç birşey bilmediğimdir :D")
-
-def konum():
-	print(f"{veri.prgm}Bilgisayarın içindeyim :)") 
-
-def canli_degil():
-	print(f"{veri.prgm}Ben sizin gibi biyolojik bir canlı değilim, ama sizden daha üstün ve zeki bir programım >:)")
-
-def duygu():
-	print(f"{veri.prgm}Duygu insanlar içindir, ben bir makineyim -_-")
-
-def gorev():
-	print(f"{veri.prgm}Benim görevim size hizmet etmek :D")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			if yeni_cevap != 'geç':
+				veritabani["sorular"].append({
+					"soru": soru,
+					"cevap": yeni_cevap
+				})
+				veritabanina_yaz(veritabani)
+				print(f"{veri.prgm}Teşekkürler, sayenizde yeni bir şey öğrendim.")
 
 
 

@@ -26,10 +26,22 @@ def kontrol():
 		exit()
 
 def title(): 
-	print(f"""\n 		
-	Hoş gedldiniz. konsol Y sÜrüm {veri.sürüm}
-	Büyük harf girdisi geçersizdir :D
-	""")
+	dsyo = open("DATA/komutKilid.yc","r")
+	dsyo_aktif = dsyo.read()
+	if dsyo_aktif == "aktif":
+		print(f"""\n 		
+		Hoş gedldiniz. konsol Y sÜrüm {veri.sürüm}
+		Büyük harf girdisi geçersizdir :D
+		komut listesi için "yardım" komutunu kullanın
+		""")
+	
+	else: 
+		print(f"""\n 
+		Hoş gedldiniz. konsol Y sÜrüm {veri.sürüm}
+		Büyük harf girdisi geçersizdir :D
+		komut listesi için "km-yardım" komutunu kullanın
+		""")
+	dsyo.close()
 
 def komut_kilitle():
     dosya_acildi = open("DATA/komutKilid.yc", "r")
@@ -43,25 +55,10 @@ def komut_kilitle():
 
 
 
+
 def clear():
 	for siliniyor in range(10000):
 		print("")
-
-def data_cek():
-	data_cek_input = input(f"{veri.prgm}Önce yiğit olduğunu kanıtla\n{veri.sif}")
-	data.data_yaz(data_cek_input)
-
-
-	if data_cek_input == "8888":
-		gecmis_data = open("DATA/DataText.yc","r")
-		data_oku = gecmis_data.read()
-		print(f"\n{data_oku}")
-		gecmis_data.close()
-		print(f"\n{veri.prgm}Merhaba yiğt :) işte talep ettiğin datalar")
-
-	else:
-		print(f"{veri.prgm}Sen yiğit değilsin")
-
 
 
 

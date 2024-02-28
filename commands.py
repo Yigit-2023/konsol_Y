@@ -114,8 +114,8 @@ def komut_lock():
         elif komut_main_input == "sistem güncelle":
             update()
 
-        elif komut_main_input[0:10] == "güncelle: ":
-            paket_update(komut_main_input,10)
+        elif komut_main_input[0:9] == "güncelle ":
+            paket_update(komut_main_input,9)
 
         elif komut_main_input == "temizle":
             sistem.clear()
@@ -270,6 +270,8 @@ def apt_remove(apt_paket_adı,bsl):
 
 def update():
     os.system("sudo apt update")
+    os.system("sudo apt update && sudo apt upgrade")
+    os.system("sudo apt list --upgradable")
 
 def paket_update(paket_adi,bsl):
     os.system(f"sudo apt upgrade {paket_adi[bsl:]}")

@@ -35,6 +35,8 @@ def apt():
 		system(f"sudo apt install {install_input.get()}")
 	def sistemi_guncelle():
 		system("sudo apt update")
+		system("sudo apt update && sudo apt upgrade")
+		system("sudo apt list --upgradable")
 	def guncelle():
 		system(f"sudo apt upgrade {updata_input.get()}")
 	def kaldir():
