@@ -15,16 +15,13 @@ Sizlerde bu paket yöneticisine kendi yaptığınız programları ekleyebilirsin
 yigitcitak.1817@gmail.com
 
 
-Nasıl kurulur ve çalıştırılır?
-Terminali açın ve aşağdaki komutları girin:
+Terminali açın ve kurmak için şu komudu yazın:
 
-1-sudo apt install git
+1-sudo apt install git && git clone https://github.com/Yigit-2023/konsol_Y
 
-2-git clone https://github.com/Yigit-2023/konsol_Y
+Çalıştırmak için şu komudu yazın:
 
-3-cd konsol_Y
-
-4-python3 main.py
+3-cd konsol_Y && python3 main.py
 
 
 
