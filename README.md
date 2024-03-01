@@ -21,7 +21,7 @@ Terminali açın ve kurmak için şu komudu yazın:
 
 Çalıştırmak için şu komudu yazın:
 
-3-cd konsol_Y && python3 main.py
+2-cd konsol_Y && python3 main.py
 
 
 
