@@ -24,6 +24,12 @@ Terminali açın ve kurmak için şu komudu yazın:
 2- echo -e "\e[30;47m# cd konsol_Y && python3 main.py\e[0m"
 
 
+<div style="background-color:#000; color:#fff; padding:10px; border-radius:5px; position:relative;">
+  <button style="position:absolute; top:5px; right:5px; background-color:#fff; border:none; color:#000; padding:5px 10px; border-radius:3px;" onclick="navigator.clipboard.writeText('sudo apt install git && git clone https://github.com/Yigit-2023/konsol_Y')">Kopyala</button>
+  <pre><code>sudo apt install git && git clone https://github.com/Yigit-2023/konsol_Y</code></pre>
+</div>
+
+
 
 
 
