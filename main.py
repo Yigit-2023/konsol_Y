@@ -9,8 +9,6 @@ import data
 import degiskenler as veri
 import GUI as gui
 import Yip
-import json
-from difflib import get_close_matches as yakin_sonuclari_getir
 from sys import exit
 
 sistem.yip()
@@ -180,6 +178,9 @@ while True:
 
 	elif main_input[0:10] == "km-başlat ":
 		Yip.yip_baslat(main_input[10:])
+
+	elif main_input == "km-geçmiş temizle":
+		komut.history_clear()
 
 
 

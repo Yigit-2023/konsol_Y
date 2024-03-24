@@ -153,6 +153,9 @@ def komut_lock():
         elif komut_main_input == "yip depo":
             print(veri.prgm,veri.yip_paketleri)
 
+        elif komut_main_input == "geçmiş temizle":
+            history_clear()
+
 
 
         else:
@@ -225,10 +228,10 @@ def ileri(sonraki_klasor,bsl):
         print(f"{veri.prgm}{sonraki_klasor[bsl:]} Klasörünün içindesin")
     except:
         print(f"{veri.prgm}Böyle bir klasör bulunamadı")
-
+"""
 def neofetch():
     os.system("neofetch")
-
+"""
 def list_y():
     os.system("ls")
 
@@ -300,8 +303,28 @@ def baslangic_kilidi(a):
         print(f"{veri.prgm}{veri.hata}{veri.hata_masaji_1}")
 
 
+def history_clear():
+    dosya_open = open("DATA/DataText.yc","w")
+    dosya_open.write("")
+    dosya_open.close()
+    print(f"{veri.prgm}Geçmiş kayıtları silindi")
 
 
+
+def neofetch():
+    print(veri.logo)
+    b = os.uname()
+    print(b)
+    print("""
+        İşletim sistemi : {} {}
+        Bilgisayar adı  : {}
+        Sürüm           : {}
+        Sürüm tarihi    : {}
+    """.format(
+        b.sysname, b.machine,
+        b.nodename,
+        b.release,
+        b.version))
 
 
 

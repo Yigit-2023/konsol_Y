@@ -65,6 +65,22 @@ def Simple_Text_Editor_kaldir():
 	print(f"{veri.prgm}Kaldırıldı")
 #----------[Simple Text Editor
 
+
+#----------[Yıldız Engelleri
+def Yildiz_Engelleri():
+	system("sudo mkdir opt/Yip/yildiz-engelleri")
+	system("sudo git clone https://github.com/Yip-2023/oyun1.git /opt/Yip/yıldız-engelleri")
+	system("sudo unzip /opt/Yip/yıldız-engelleri/oyun1.zip -d /opt/Yip/yıldız-engelleri/oyun1/")
+	print("Kurulum tamamlandı")
+
+def Yildiz_Engelleri_start():
+	system("/opt/Yip/yıldız-engelleri/oyun1/Yıldız-Engelleri/oyun1")
+
+def Yildiz_Engelleri_kaldir():
+	system("sudo rm -r /opt/Yip/yıldız-engelleri")
+
+#----------[Yıldız Engelleri
+
 def yip_kaldir(paket_adi):
 	if paket_adi == "minecraft":
 		minecraft_kaldir()
@@ -72,6 +88,8 @@ def yip_kaldir(paket_adi):
 		not_defteri_kaldir()
 	elif paket_adi == "simple-text-editor":
 		Simple_Text_Editor_kaldir()
+	elif paket_adi == "yıldız-engelleri":
+		Yildiz_Engelleri_kaldir()
 
 	else:
 		print(f"{veri.prgm}{paket_adi} İsimli paket bulunamadı")
@@ -83,6 +101,8 @@ def yip_kur(paket_adi):
 		not_defteri()
 	elif paket_adi == "simple-text-editor":
 		Simple_Text_Editor()
+	elif paket_adi == "yıldız-engelleri":
+		Yildiz_Engelleri()
 
 	else:
 		print(f"{veri.prgm}{paket_adi} İsimli paket bulunamadı")
@@ -94,6 +114,8 @@ def yip_baslat(paket_adi):
 		not_defteri_start()
 	elif paket_adi == "simple-text-editor":
 		Simple_Text_Editor_start()
+	elif paket_adi == "yıldız-engelleri":
+		Yildiz_Engelleri_start()
 
 	else:
 		print(f"{veri.prgm}{paket_adi} İsimli paket bulunamadı")

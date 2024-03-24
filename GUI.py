@@ -4,9 +4,6 @@ import tkinter as tk
 import degiskenler as veri
 from os import system
 
-
-
-
 def apt():
 	def imza():
 		imza_pencere = tk.Tk()
@@ -121,6 +118,7 @@ def apt():
 
 
 	apt_gui_pencere.mainloop()
+
 
 
 

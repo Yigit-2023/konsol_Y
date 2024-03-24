@@ -11,9 +11,10 @@ hata = "Error: >"
 komut = "km>"
 chb = "chat>"
 
-sürüm = "1.1"
+sürüm = "1.2"
 
-
+yip_install = f"{prgm}Paket kurulumu tamamlandı :D"
+yip_remove = f"{prgm}Paket kaldırma işlemi tamamlandı"
 
 Kaynak_kod = "https://github.com/Yigit-2023/konsol_Y"
 
@@ -161,6 +162,7 @@ km-geçmiş --> Yazma geçmişinizi gösterir
 km-linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
 km-komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
 km-işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
+km-geçmiş temizle --> Geçmişi temizler
 
 ------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------
@@ -244,6 +246,7 @@ geçmiş --> Yazma geçmişinizi gösterir
 linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
 komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
 işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
+km-geçmiş temizle --> Geçmişi temizler
 
 --------------------------------------------------------------------------------------
 """
@@ -261,11 +264,16 @@ yip_paketleri = """ Yip deposundaki paketler:
 |-Simple Text Editor:
 |----Tür: Metin düzenleyeci
 |----Hazırlayanlar: chat gpt
-|----Kurmak için gerekli komut: yip kur simple_text-editor
+|----Kurmak için gerekli komut: yip kur simple-text-editor
+
+|-Yıldız engelleri:
+|----Tür: Oyun
+|----Hazırlayanlar: chat gpt
+|----Kurmak için gerekli komut: yip kur yıldız-engelleri
 
 
 
-bulunan program sayısı: 2
+bulunan program sayısı: 3
 
 Sizlerde kendi yaptığınız programları buraya ekleyebilirsiniz :D
 Yapmanız gereken bana e-posta göndermeniz ve programınzın bulunduğu
