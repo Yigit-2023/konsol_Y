@@ -35,4 +35,4 @@ Terminali açın ve kurmak için şu komudu yazın:
 
 
 
-sürüm: 1.1
+sürüm: 1.2
