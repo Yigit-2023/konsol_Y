@@ -17,11 +17,11 @@ yigitcitak.1817@gmail.com
 
 Terminali açın ve kurmak için şu komudu yazın:
 
-1-sudo apt install git && git clone https://github.com/Yigit-2023/konsol_Y
+1- echo -e "\e[30;47m# sudo apt install git && git clone https://github.com/Yigit-2023/konsol_Y\e[0m"
 
 Çalıştırmak için şu komudu yazın:
 
-2-cd konsol_Y && python3 main.py
+2- echo -e "\e[30;47m# cd konsol_Y && python3 main.py\e[0m"
 
 
 
