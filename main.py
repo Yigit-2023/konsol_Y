@@ -11,12 +11,12 @@ import GUI as gui
 import Yip
 from sys import exit
 
+#sistem.konum()
 sistem.yip()
 sistem.kontrol()
 #sistem.logo_bas()
 sistem.title()
 sistem.komut_kilitle()
-
 
 while True:
 

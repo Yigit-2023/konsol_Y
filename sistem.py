@@ -5,6 +5,7 @@ import degiskenler as veri
 from os import name
 from sys import exit
 from os import system
+from os import chdir
 import commands as komut
 
 def logo_bas():
@@ -65,7 +66,9 @@ def clear():
 
 
 
-
+def konum():
+	system("cd /usr/local/bin")
+	chdir("/usr/local/bin")
 
 
 

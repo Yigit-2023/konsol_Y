@@ -182,6 +182,7 @@ def konum():
     print(veri.prgm,os.getcwd())
 
 
+
 def isinlan(konum,bsl):
     try:
         os.chdir(konum[bsl:])
