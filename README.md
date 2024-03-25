@@ -18,15 +18,15 @@ yigitcitak.1817@gmail.com
 Terminali açın ve kurmak için şu komudu yazın:
 
 <div style="background-color:#000; color:#fff; padding:10px; border-radius:5px; position:relative;">
-  <button style="position:absolute; top:5px; right:5px; background-color:#fff; border:none; color:#000; padding:5px 10px; border-radius:3px;" onclick="navigator.clipboard.writeText('sudo apt install git && git clone https://github.com/Yigit-2023/konsol_Y')"></button>
-  <pre><code>sudo apt install git && git clone https://github.com/Yigit-2023/konsol_Y</code></pre>
+  <button style="position:absolute; top:5px; right:5px; background-color:#fff; border:none; color:#000; padding:5px 10px; border-radius:3px;" onclick="navigator.clipboard.writeText('sudo apt install git && git clone https://github.com/Yigit-2023/konsolY.git && sudo dpkg -i konsolY.deb')"></button>
+  <pre><code>sudo apt install git && git clone https://github.com/Yigit-2023/konsolY.git && sudo dpkg -i konsolY.deb</code></pre>
 </div>
 
 Çalıştırmak için şu komudu yazın:
 
 <div style="background-color:#000; color:#fff; padding:10px; border-radius:5px; position:relative;">
-  <button style="position:absolute; top:5px; right:5px; background-color:#fff; border:none; color:#000; padding:5px 10px; border-radius:3px;" onclick="navigator.clipboard.writeText('cd konsol_Y && python3 main.py')"></button>
-  <pre><code>cd konsol_Y && python3 main.py</code></pre>
+  <button style="position:absolute; top:5px; right:5px; background-color:#fff; border:none; color:#000; padding:5px 10px; border-radius:3px;" onclick="navigator.clipboard.writeText('konsolY')"></button>
+  <pre><code>konsolY</code></pre>
 </div>
 
 
