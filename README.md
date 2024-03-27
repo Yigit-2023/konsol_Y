@@ -42,4 +42,4 @@ Kaldırmak için şu komudu yazın:
 
 
 
-sürüm: 1.2.5
+sürüm: 1.3
