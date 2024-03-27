@@ -24,12 +24,21 @@ def paketler():
 
 #----------[Minecraft
 def minecraft():
-	system("sudo mkdir opt/Yip/minecraft")
-	system("sudo git clone https://github.com/Yip-2023/Legacy_Launcher.git /opt/Yip/minecraft")
-	system("sudo apt update")
-	system("sudo apt install default-jre")
-	system("sudo apt update")
-	system("sudo apt install default-jdk")
+	while True:
+		minecraft_x = input(f"{veri.prgm}Kurulacak Paketler: Minecraft,Java| Kurulum başlasın mı? [e,h]")
+		if minecraft_x == "e" or minecraft_x == "E":
+			system("sudo mkdir opt/Yip/minecraft")
+			system("sudo git clone https://github.com/Yip-2023/Legacy_Launcher.git /opt/Yip/minecraft")
+			system("sudo apt update")
+			system("sudo apt install default-jre")
+			system("sudo apt update")
+			system("sudo apt install default-jdk")
+			print(veri.yip_install)
+		elif minecraft_x == "h" or minecraft_x == "H":
+			print(f"{veri.prgm}Kurulum iptal edildi")
+			break
+		else:
+			pass
 
 def minecraft_start():
 	system("java -jar /opt/Yip/minecraft/LegacyLauncher_legacy.jar")
@@ -43,6 +52,7 @@ def minecraft_kaldir():
 def not_defteri():
 	system("sudo mkdir opt/Yip/not_defteri")
 	system("sudo git clone https://github.com/emrecanstk/not-defteri.git /opt/Yip/not_defteri")
+	print(veri.yip_install)
 
 def not_defteri_start():
 	system("python3 /opt/Yip/not_defteri/main.py")
@@ -56,6 +66,7 @@ def not_defteri_kaldir():
 def Simple_Text_Editor():
 	system("sudo mkdir opt/Yip/Simple_Text_Editor")
 	system("sudo git clone https://github.com/Yip-2023/Simple_Text_Editor.git /opt/Yip/Simple_Text_Editor")
+	print(veri.yip_install)
 
 def Simple_Text_Editor_start():
 	system("python3 /opt/Yip/Simple_Text_Editor/Simple_Text_Editor.py")
@@ -71,15 +82,29 @@ def Yildiz_Engelleri():
 	system("sudo mkdir opt/Yip/yildiz-engelleri")
 	system("sudo git clone https://github.com/Yip-2023/oyun1.git /opt/Yip/yıldız-engelleri")
 	system("sudo unzip /opt/Yip/yıldız-engelleri/oyun1.zip -d /opt/Yip/yıldız-engelleri/oyun1/")
-	print("Kurulum tamamlandı")
+	print(veri.yip_install)
 
 def Yildiz_Engelleri_start():
 	system("/opt/Yip/yıldız-engelleri/oyun1/Yıldız-Engelleri/oyun1")
 
 def Yildiz_Engelleri_kaldir():
 	system("sudo rm -r /opt/Yip/yıldız-engelleri")
+	print(f"{veri.prgm}Kaldırıldı")
 
 #----------[Yıldız Engelleri
+
+#----------[Sublime text editor
+#							Geliştirilme aşamasında
+def sublime_text_editor():
+	system("sudo mkdir /opt/Yip/sublime-text-editor")
+	system("sudo git clone https://github.com/Yip-2023/sublime_text.git /opt/Yip/sublime-text-editor/")
+	system("sudo dpkg -r /opt/Yip/sublime-text-editorsublime-text_build-3211_amd64.deb")
+
+def sublime_text_editor_start():
+	system("sudo sublime")#Bu paket hatalı
+
+
+#----------[Sublime text editor
 
 def yip_kaldir(paket_adi):
 	if paket_adi == "minecraft":
@@ -103,6 +128,8 @@ def yip_kur(paket_adi):
 		Simple_Text_Editor()
 	elif paket_adi == "yıldız-engelleri":
 		Yildiz_Engelleri()
+	elif paket_adi == "sublime-text-editor":
+		sublime_text_editor()
 
 	else:
 		print(f"{veri.prgm}{paket_adi} İsimli paket bulunamadı")

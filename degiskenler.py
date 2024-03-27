@@ -11,7 +11,7 @@ hata = "Error: >"
 komut = "km>"
 chb = "chat>"
 
-sürüm = "1.2.5"
+sürüm = "1.3"
 
 yip_install = f"{prgm}Paket kurulumu tamamlandı :D"
 yip_remove = f"{prgm}Paket kaldırma işlemi tamamlandı"
@@ -160,7 +160,7 @@ km-temizle --> Konsoldaki yazıları siler
 km-başlat (paket adı) --> Yüklü olan paketleri çalıştırır
 km-geçmiş --> Yazma geçmişinizi gösterir
 km-linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
-km-komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
+km-komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=kapalı"
 km-işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
 km-geçmiş temizle --> Geçmişi temizler
 
@@ -206,6 +206,9 @@ güncelle (paket adı) --> apt Paketlerini günceller
 gui-apt --> Bu komut APT paket yöneticisini gui(kullanıcı arayüzü) versiyonunu açar
 sistem güncelle --> Sistemi günceller
 
+dep kur (paket konumu) --> deb paketlerini kurar
+deb kaldır (paket adı) --> deb paketlerini kaldırır 
+
 ------------------------------------------------------------------------------------------------------
 Klasör işlemleri:
 
@@ -244,9 +247,11 @@ temizle --> Konsoldaki yazıları siler
 başlat (paket adı) --> Yüklü olan paketleri çalıştırır
 geçmiş --> Yazma geçmişinizi gösterir
 linux komut=(linux terminal komutu) -->Linux komutlarını çalıştırmaya yarar (Bazı komutlar çalışmayabilir)
-komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=açık"
+komut kilitle=açık/kapalı --> KM moduna kilitler. "komut kilitle=açık" veya "komut kilitle=kapalı"
 işletim sistemi --> İşletim sistemi bilgilerini verir (neofetch)
 geçmiş temizle --> Geçmişi temizler
+sistem kapat --> Bilgisayarı kapatır
+sistem yeniden başlat --> Bilgisayarı yeniden başlatır
 
 --------------------------------------------------------------------------------------
 """

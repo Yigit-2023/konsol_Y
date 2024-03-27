@@ -156,6 +156,12 @@ def komut_lock():
         elif komut_main_input == "geçmiş temizle":
             history_clear()
 
+        elif komut_main_input[0:8] == "deb kur ":
+            deb_kur(komut_main_input[8:])
+
+        elif komut_main_input[0:11] == "deb kaldır ":
+            deb_kaldir(komut_main_input[11:])
+
 
 
         else:
@@ -258,10 +264,26 @@ def klasor_sil_pp(klasor_isim,bsl):
 
 
 def sistem_kapat():
-    os.system("sudo shutdown now")
+    while True:
+        s_onay = input(f"{veri.prgm}Bilgisayarınızın kapatılmasını istiyor musunuz? [e.h]")
+        if s_onay == "e" or s_onay == "E":
+            os.system("sudo shutdown now")
+        elif s_onay == "h" or s_onay == "H":
+            print(f"{veri.prgm}Kapatılma işlemi iptal edildi")
+            break
+        else:
+            pass
 
 def sistem_yeniden_baslat():
-    os.system("sudo reboot")
+    while True:
+        r_onay = input(f"{veri.prgm}Bilgisayarınızın yeniden başlatılmasını istiyor musunuz? [e,h]")
+        if r_onay == "e" or r_onay == "E":
+            os.system("sudo reboot")
+        elif r_onay == "h" or r_onay == "H":
+            print(f"{veri.prgm}Yeniden başlatma işlemi iptal edildi")
+            break
+        else:
+            pass
 
 def gitp(paket_adi,bsl):
     os.system(f"git clone https://github.com/{paket_adi[bsl:]}")
@@ -328,8 +350,11 @@ def neofetch():
         b.version))
 
 
+def deb_kur(paket_adi):
+    os.system(f"sudo dpkg -i {paket_adi}")
 
-
+def deb_kaldir(paket_adi):
+    os.system(f"sudo dpkg -r konsolY {paket_adi}")
 
 
 

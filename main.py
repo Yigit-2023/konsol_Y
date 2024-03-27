@@ -1,4 +1,3 @@
-
 #Yazan Yiğit çıtak
 
 import chat
@@ -19,7 +18,6 @@ sistem.title()
 sistem.komut_kilitle()
 
 while True:
-
 	try:
 		sistem.komut_kilitle()
 	except FileNotFoundError:
@@ -32,7 +30,6 @@ while True:
 	except:
 		pass
 
-
 	if main_input == "çık" or main_input == "kapat" or main_input == "kapan":
 		#for i_kapanma in range(10000):
 		#	print(f"Kapatılıyor {i_kapanma}")
@@ -44,14 +41,8 @@ while True:
 #---------------------------------------------------------------------------------------------[Chat
 
 
-
-
 	elif main_input == "chat bot":
 		chat.chat_bot()
-
-
-
-
 
 	elif main_input == "kaynak kodları" or main_input == "kaynak kodlarını ver" or main_input == "kaynak kodlarını verirmisi":
 		print(veri.prgm,veri.Kaynak_kod)
@@ -181,6 +172,7 @@ while True:
 
 	elif main_input == "km-geçmiş temizle":
 		komut.history_clear()
+
 
 
 

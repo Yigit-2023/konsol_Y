@@ -39,7 +39,7 @@ def chat_bot():
 		if soru == "çık":
 			break
 
-		elif soru == "kapan" or soru == "kapat:":
+		elif soru == "kapan" or soru == "kapat":
 			exit()
         
 		gelen_sonuc = yakin_sonuc_bul(soru, [soru_cevaplar["soru"] for soru_cevaplar in veritabani["sorular"]])
