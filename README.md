@@ -14,6 +14,7 @@ Bu programın içinde kendi yaptığım Yip isimli bir paket yöneticisi var. il
 Sizlerde bu paket yöneticisine kendi yaptığınız programları ekleyebilirsiniz, Yapmanız gereken sadece bana e-psta göndermeniz
 yigitcitak.1817@gmail.com
 
+Yeni eklediğim deb kaldır komutu hatalı, bunu hafta sonu düzelteceğim
 
 Terminali açın ve kurmak için şu komudu yazın:
 
