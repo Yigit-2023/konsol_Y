@@ -354,7 +354,7 @@ def deb_kur(paket_adi):
     os.system(f"sudo dpkg -i {paket_adi}")
 
 def deb_kaldir(paket_adi):
-    os.system(f"sudo dpkg -r konsolY {paket_adi}")
+    os.system(f"sudo dpkg -r {paket_adi}")
 
 
 
