@@ -34,6 +34,7 @@ def minecraft():
 			system("sudo apt update")
 			system("sudo apt install default-jdk")
 			print(veri.yip_install)
+			break
 		elif minecraft_x == "h" or minecraft_x == "H":
 			print(f"{veri.prgm}Kurulum iptal edildi")
 			break
